@@ -1,0 +1,195 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D3BC8D; /* Or use your theme color */
+    z-index: 1000; /* Ensures it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: -30px;
+}
+nav .name a {
+    font-family: 'Fira Code', monospace;
+    color: black;
+    font-size: 26px;
+    margin: 0 20px;
+}
+nav .nav-links a {
+    color: var(--text-color);
+    font-size: 18px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav .socials a {
+    position: relative;
+    margin: 0 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    height: 80px;
+}
+.socials img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+  .nav-links {   
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* adjust spacing here */
+    margin-top: 10px; /* space from the element above */
+    margin-left: 90px;
+  }
+  .about {
+      display: none;
+      transform: translateY(0) scale(1);
+  }
+  .portfolio {
+      display: none;
+      transform: translateY(0) scale(1);
+  }
+  .contact {
+      display: none;
+      transform: translateY(0) scale(1);
+  }
+  
+  .nav-links {
+      position: fixed;
+      z-index: 10;
+      top: 50%;
+      right: 3%;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-50%);
+      align-items: center;
+      justify-content: center;
+      .about-button, .portfolio-button, .contact-button, .home-button {
+          padding: 6px;
+          cursor: pointer;
+          background-color: #D3BC8D;
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          margin: .7em 0;
+          box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+  
+          i {
+              font-size: 1.2rem;
+              color: grey;
+              pointer-events: none;
+          }
+      }
+  }
+  #homeIcon::after,
+  #aboutIcon::after,
+  #portfolioIcon::after,
+  #contactIcon::after {
+      content: attr(data-tooltip);
+      position: absolute;
+    right: 100%; /* position left of the button */
+    margin-right: 10px; /* spacing between icon and tooltip */
+    background-color: #D3BC8D;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    }
+    
+    #homeIcon:hover::after,
+    #aboutIcon:hover::after,
+    #portfolioIcon:hover::after,
+    #contactIcon:hover::after {
+      opacity: 1;
+    }
+
+  .container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  .quote-box {
+    margin: 20px 0;
+  }
+  
+  #quote {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #author {
+    display: block;
+    font-style: italic;
+    font-size: 1em;
+    color: #e0e0e0;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f1f1f1;
+  }
+  
